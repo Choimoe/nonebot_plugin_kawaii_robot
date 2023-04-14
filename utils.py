@@ -46,6 +46,9 @@ LeafThesaurus = json.load(open(Path(path) / "leaf.json", "r", encoding="utf8"))
 # 载入词库(这个词库有点涩)
 AnimeThesaurus = json.load(open(Path(path) / "data.json", "r", encoding="utf8"))
 
+# Songs
+SongNameThesaurus = json.load(open(Path(path) / "song.json", "r", encoding="utf8"))
+
 
 # 向bot打招呼
 hello__bot = [

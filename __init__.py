@@ -19,6 +19,7 @@ from .utils import (
     MyThesaurus,
     LeafThesaurus,
     AnimeThesaurus,
+    SongNameThesaurus,
     get_chat_result,
     hello__bot,
     hello__reply,
@@ -102,7 +103,7 @@ if reply_type > -1:
         # 从 LeafThesaurus 里获取结果
         if result := get_chat_result(LeafThesaurus,msg):
             bot_response = result.replace("name", nickname)
-            bot_response = bot_response.replace("acsgn", random.choice(song_name_data["name"]))
+            bot_response = bot_response.replace("acsgn", random.choice(SongNameThesaurus["name"]))
             await talk.finish(Message(bot_response))
 
         # 从 AnimeThesaurus 里获取结果
