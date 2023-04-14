@@ -43,8 +43,6 @@ interrupt = leaf.leaf_interrupt
 
 ignore = leaf.leaf_ignore
 
-song_name_data = json.loads("./resource/song.json")
-
 # 配置合法检测
 
 if repeater_limit[0] < 2 or repeater_limit[0] > repeater_limit[1]:
