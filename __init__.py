@@ -101,15 +101,14 @@ if reply_type > -1:
             await talk.finish(Message(result))
 
         if result := get_chat_result(ChoimoeThesaurus,msg):
-            bot_response = result
-            if bot_response == "gen_windy":
+            if result == "gen_windy":
                 bot_response = random.choice(GenshinCharThesaurus["windy"])
-            elif bot_response == "op_res":
+            elif result == "op_res":
                 bot_response = random.choice(GenshinCharThesaurus["op_res"])
-            elif bot_response == "arc_rec":
-                bot_response = random.choice(ArcaeaThesaurus["windy"])
+            elif result == "arc_rec":
+                bot_response = random.choice(ArcaeaThesaurus["arc_rec"])
                 bot_response = bot_response.replace("acsgn", random.choice(SongNameThesaurus["name"]))
-            await talk.finish(Message(bot_response))
+            await talk.finish(Message(result))
 
         # 从 LeafThesaurus 里获取结果
         if result := get_chat_result(LeafThesaurus,msg):
