@@ -108,7 +108,10 @@ if reply_type > -1:
                 bot_response = random.choice(GenshinCharThesaurus["op_res"])
             elif result == "arc_rec":
                 bot_response = random.choice(ArcaeaThesaurus["arc_rec"])
-                bot_response = bot_response.replace("arc_rec", random.choice(SongNameThesaurus["name"]))
+                bot_response = bot_response.replace("acsgn", random.choice(SongNameThesaurus["arcaea_name"]))
+            elif result == "pjsk_rec":
+                bot_response = random.choice(ArcaeaThesaurus["pjsk_rec"])
+                bot_response = bot_response.replace("pjsksgn", random.choice(SongNameThesaurus["pjsk_name"]))
             if bot_response != None:
                 await talk.finish(Message(bot_response))
 
