@@ -107,7 +107,7 @@ if reply_type > -1:
                 bot_response = random.choice(GenshinCharThesaurus["op_res"])
             elif result == "arc_rec":
                 bot_response = random.choice(ArcaeaThesaurus["arc_rec"])
-                bot_response = bot_response.replace("acsgn", random.choice(SongNameThesaurus["name"]))
+                bot_response = bot_response.replace("arc_rec", random.choice(SongNameThesaurus["name"]))
             await talk.finish(Message(result))
 
         # 从 LeafThesaurus 里获取结果
