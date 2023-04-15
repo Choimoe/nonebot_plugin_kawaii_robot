@@ -23,23 +23,22 @@ path = os.path.join(os.path.dirname(__file__), "resource")
 lst = os.listdir(Path(path))
 lst.remove("leaf.json")
 lst.remove("data.json")
-lst.remove("choimoe.json")
 MyThesaurus = {}
-for i in lst:
-    try:
-        tmp = json.load(open(Path(path) / i, "r", encoding="utf8"))
-        logger.info(f"{i} 加载成功~")
-        for key in tmp.keys():
-            if not key in MyThesaurus.keys():
-                MyThesaurus.update({key:[]})
-            if type(tmp[key]) == list:
-                MyThesaurus[key] += tmp[key]
-            else:
-                logger.info(f"\t文件 {i} 内 {key} 词条格式错误。")
-    except UnicodeDecodeError:
-        logger.info(f"{i} utf8解码出错！！！")
-    except Exception as error:
-        logger.info(f"错误：{error} {i} 加载失败...")
+# for i in lst:
+#     try:
+#         tmp = json.load(open(Path(path) / i, "r", encoding="utf8"))
+#         logger.info(f"{i} 加载成功~")
+#         for key in tmp.keys():
+#             if not key in MyThesaurus.keys():
+#                 MyThesaurus.update({key:[]})
+#             if type(tmp[key]) == list:
+#                 MyThesaurus[key] += tmp[key]
+#             else:
+#                 logger.info(f"\t文件 {i} 内 {key} 词条格式错误。")
+#     except UnicodeDecodeError:
+#         logger.info(f"{i} utf8解码出错！！！")
+#     except Exception as error:
+#         logger.info(f"错误：{error} {i} 加载失败...")
 
 # 载入首选词库
 LeafThesaurus = json.load(open(Path(path) / "leaf.json", "r", encoding="utf8"))
