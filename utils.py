@@ -49,6 +49,8 @@ AnimeThesaurus = json.load(open(Path(path) / "data.json", "r", encoding="utf8"))
 # Songs
 SongNameThesaurus = json.load(open(Path(path) / "song.json", "r", encoding="utf8"))
 
+# Genshin
+GenshinCharThesaurus = json.load(open(Path(path) / "genshin.json", "r", encoding="utf8"))
 
 # 向bot打招呼
 hello__bot = [
@@ -60,7 +62,7 @@ hello__bot = [
     "您好啊",
     "你好",
     "在",
-    "早",
+    "早，准备开始新的冒险了么？"
 ]
 
 # hello之类的回复

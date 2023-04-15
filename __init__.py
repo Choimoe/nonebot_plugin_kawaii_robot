@@ -22,6 +22,7 @@ from .utils import (
     SongNameThesaurus,
     get_chat_result,
     hello__bot,
+    GenshinCharThesaurus,
     hello__reply,
     poke__reply,
     unknow_reply,
@@ -102,6 +103,7 @@ if reply_type > -1:
         if result := get_chat_result(LeafThesaurus,msg):
             bot_response = result.replace("name", nickname)
             bot_response = bot_response.replace("acsgn", random.choice(SongNameThesaurus["name"]))
+            bot_response = bot_response.replace("gen_windy", random.choice(GenshinCharThesaurus["windy"]))
             await talk.finish(Message(bot_response))
 
         # 从 AnimeThesaurus 里获取结果
