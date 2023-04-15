@@ -90,7 +90,7 @@ if reply_type > -1:
             nickname = event.sender.nickname
 
         if len(nickname) > 10:
-            nickname = nickname[:2] + random.choice(["酱","亲","ちゃん","同志","老师"])
+            nickname = nickname[:3] + random.choice(["酱","亲","ちゃん","同志","老师"])
 
         # 从个人字典里获取结果
         if result := get_chat_result(MyThesaurus, msg):

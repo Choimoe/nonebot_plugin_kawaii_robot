@@ -3,16 +3,16 @@
         "gen_windy"
     ],
 
-    "OP":"op_res",
-    "op":"op_res",
-    "原批":"op_res",
-    "O批":"op_res",
+    "OP": ["op_res"],
+    "op": ["op_res"],
+    "原批": ["op_res"],
+    "O批": ["op_res"],
 
-    "arc": "arc_rec",
-    "Arc": "arc_rec",
+    "arc": ["arc_rec"],
+    "Arc": ["arc_rec"],
 
-    "pjsk曲": "pjsk_rec",
-    "pjsk的曲": "pjsk_rec",
-    "烤曲": "pjsk_rec",
-    "烤的曲": "pjsk_rec"
+    "pjsk曲": ["pjsk_rec"],
+    "pjsk的曲": ["pjsk_rec"],
+    "烤曲": ["pjsk_rec"],
+    "烤的曲": ["pjsk_rec"]
 }
