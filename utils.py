@@ -23,6 +23,7 @@ path = os.path.join(os.path.dirname(__file__), "resource")
 lst = os.listdir(Path(path))
 lst.remove("leaf.json")
 lst.remove("data.json")
+lst.remove("choimoe.json")
 MyThesaurus = {}
 for i in lst:
     try:
@@ -45,6 +46,12 @@ LeafThesaurus = json.load(open(Path(path) / "leaf.json", "r", encoding="utf8"))
 
 # 载入词库(这个词库有点涩)
 AnimeThesaurus = json.load(open(Path(path) / "data.json", "r", encoding="utf8"))
+
+# 载入choimoe词库
+ChoimoeThesaurus = json.load(open(Path(path) / "choimoe.json", "r", encoding="utf8"))
+
+# Arcaea
+ArcaeaThesaurus = json.load(open(Path(path) / "arcaea.json", "r", encoding="utf8"))
 
 # Songs
 SongNameThesaurus = json.load(open(Path(path) / "song.json", "r", encoding="utf8"))

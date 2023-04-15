@@ -20,6 +20,8 @@ from .utils import (
     LeafThesaurus,
     AnimeThesaurus,
     SongNameThesaurus,
+    ArcaeaThesaurus,
+    ChoimoeThesaurus,
     get_chat_result,
     hello__bot,
     GenshinCharThesaurus,
@@ -98,12 +100,19 @@ if reply_type > -1:
         if result:
             await talk.finish(Message(result))
 
+        if result := get_chat_result(ChoimoeThesaurus,msg):
+            if bot_response == "gen_windy":
+                bot_response = random.choice(GenshinCharThesaurus["windy"])
+            elif bot_response == "op_res":
+                bot_response = random.choice(GenshinCharThesaurus["op_res"])
+            elif bot_response == "arc_rec":
+                bot_response = random.choice(ArcaeaThesaurus["windy"])
+                bot_response = bot_response.replace("acsgn", random.choice(SongNameThesaurus["name"]))
+            await talk.finish(Message(bot_response))
 
         # 从 LeafThesaurus 里获取结果
         if result := get_chat_result(LeafThesaurus,msg):
-            bot_response = result.replace("name", nickname)
             bot_response = bot_response.replace("acsgn", random.choice(SongNameThesaurus["name"]))
-            bot_response = bot_response.replace("gen_windy", random.choice(GenshinCharThesaurus["windy"]))
             await talk.finish(Message(bot_response))
 
         # 从 AnimeThesaurus 里获取结果
