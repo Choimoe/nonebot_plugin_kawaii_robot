@@ -58,6 +58,12 @@ SongNameThesaurus = json.load(open(Path(path) / "song.json", "r", encoding="utf8
 # Genshin
 GenshinCharThesaurus = json.load(open(Path(path) / "genshin.json", "r", encoding="utf8"))
 
+# emo
+EMOThesaurus = json.load(open(Path(path) / "emo.json", "r", encoding="utf8"))
+
+# Phigros
+PhigrosThesaurus = json.load(open(Path(path) / "phigros.json", "r", encoding="utf8"))
+
 # 向bot打招呼
 hello__bot = [
     "你好啊",

@@ -14,5 +14,13 @@
     "pjsk曲": ["pjsk_rec"],
     "pjsk的曲": ["pjsk_rec"],
     "烤曲": ["pjsk_rec"],
-    "烤的曲": ["pjsk_rec"]
+    "烤的曲": ["pjsk_rec"],
+
+    "emo": ["emo_res"],
+    "开e": ["emo_res"],
+    "开E": ["emo_res"],
+    "EMO": ["emo_res"],
+
+    "tip": ["phi_tips"],
+    "phi": ["phi_tips"]
 }

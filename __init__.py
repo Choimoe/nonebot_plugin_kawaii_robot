@@ -22,6 +22,8 @@ from .utils import (
     SongNameThesaurus,
     ArcaeaThesaurus,
     ChoimoeThesaurus,
+    EMOThesaurus,
+    PhigrosThesaurus,
     get_chat_result,
     hello__bot,
     GenshinCharThesaurus,
@@ -112,6 +114,10 @@ if reply_type > -1:
             elif result == "pjsk_rec":
                 bot_response = random.choice(ArcaeaThesaurus["pjsk_rec"])
                 bot_response = bot_response.replace("pjsksgn", random.choice(SongNameThesaurus["pjsk_name"]))
+            elif result == "emo_res":
+                bot_response = random.choice(EMOThesaurus["emo_res"])
+            elif result == "phi_tips":
+                bot_response = random.choice(EMOThesaurus["phi_tips"])
             if bot_response != None:
                 await talk.finish(Message(bot_response))
 
