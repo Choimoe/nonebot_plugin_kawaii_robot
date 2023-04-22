@@ -117,7 +117,7 @@ if reply_type > -1:
             elif result == "emo_res":
                 bot_response = random.choice(EMOThesaurus["emo_res"])
             elif result == "phi_tips":
-                bot_response = random.choice(EMOThesaurus["phi_tips"])
+                bot_response = random.choice(PhigrosThesaurus["phi_tips"])
             if bot_response != None:
                 await talk.finish(Message(bot_response))
 
