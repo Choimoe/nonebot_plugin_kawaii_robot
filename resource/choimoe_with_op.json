@@ -3,6 +3,11 @@
         "gen_windy"
     ],
 
+    "OP": ["op_res"],
+    "op": ["op_res"],
+    "原批": ["op_res"],
+    "O批": ["op_res"],
+
     "arc": ["arc_rec"],
     "Arc": ["arc_rec"],
 
